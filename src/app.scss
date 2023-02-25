@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&display=swap');
+@import './styles/variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'DM Mono', monospace;
+  background: linear-gradient(-45deg, $color-accent, $color-main);
+  background-repeat: none;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appContainer {
+  padding: 2rem;
+  width: 330px;
+  height: 550px;
+  background: rgba(230, 230, 224, 0.4)
+}
