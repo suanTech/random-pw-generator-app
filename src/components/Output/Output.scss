@@ -1,0 +1,52 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.container.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-field {
+  background: none;
+  border: none;
+  width: 80%;
+  height: 100%;
+  font-family: "Cutive Mono", monospace;
+  @include text-decoration();
+  @include font-size($h2-font-sizes);
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &::placeholder {
+    @include text-decoration(#5e90cc);
+    font-family: "Cutive Mono", monospace;
+  }
+}
+.copyButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .copyMessage {
+    @include text-decoration();
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+  }
+  .copyMessage.show {
+    opacity: 1;
+  }
+}
+.copyIcon {
+  width: 25px;
+  height: 25px;
+  filter: drop-shadow(1px 1px 1px rgba(255, 255, 230, 0.5));
+  &:hover {
+    transform: translate(1px, 1px);
+    filter: brightness(120%);
+  }
+  &:active {
+    filter: opacity(0.2);
+  }
+}

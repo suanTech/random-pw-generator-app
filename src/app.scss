@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&display=swap');
-@import './styles/variables';
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import "./styles/variables";
+@import "./styles/mixins";
 
 *,
 *::before,
@@ -10,20 +11,38 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'DM Mono', monospace;
+  font-family: "Cutive Mono", monospace;
   background: linear-gradient(-45deg, $color-accent, $color-main);
-  background-repeat: none;
+  background-repeat: no-repeat;
+  @include text-decoration(#535790);
 }
 
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  h2 {
+    text-align: center;
+  }
 }
 
-.appContainer {
-  padding: 2rem;
-  width: 330px;
-  height: 550px;
-  background: rgba(230, 230, 224, 0.4)
+.container {
+  margin-top: 1rem;
+  min-height: 50px;
+  padding: .8em;
+  background: linear-gradient(
+    -60deg,
+    rgba(151, 151, 151, 0.2),
+    rgba(255, 230, 232, 0.1)
+  );
+  backdrop-filter: blur(85px);
+  -webkit-backdrop-filter: blur(85px);
+  box-shadow: 1px 4px 10px rgba(20, 20, 151, 0.18);
+  border-radius: 0.8rem;
+  @include container-size($container-sizes);
+  &.main {
+    min-height: 65vh;
+    padding: 1.2rem;
+  }
 }

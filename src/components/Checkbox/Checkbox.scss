@@ -1,0 +1,40 @@
+@import '../../styles/mixins';
+
+.checkbox-wrapper {
+  margin: 10px auto;
+}
+.checkbox-wrapper label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 1.6px solid rgba(238, 233, 230, 0.4);
+  box-shadow:rgba(238, 233, 230, 0.9);
+  border-radius: 2px;
+  transition: all .2s ease-out;
+  &:hover{
+    transform: scale(1.05);
+    border: 1.6px solid rgba(238, 233, 230, 0.8);
+    background:linear-gradient(to top, rgba(134, 217, 153, 0.85) 20% ,rgba(159, 211, 171, 0.55), rgba(187, 223, 196, 0.4));
+  }
+  &:checked{
+    background:linear-gradient(to top, rgba(134, 217, 153, 0.85) 40%,rgba(142, 206, 157, 0.75), rgba(187, 223, 196, 0.4));
+    position: relative;
+    &::before{
+      content: url('../../assets/check-icon.svg');
+      transform: scale(.75);
+      color: #fff;
+      position: absolute;
+    }
+    & + p {
+      @include text-decoration(#222241);
+    }
+  }
+}

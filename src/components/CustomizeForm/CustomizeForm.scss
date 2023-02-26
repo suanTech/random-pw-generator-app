@@ -1,0 +1,6 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.main h2 {
+  @include text-decoration(#f0e8de, rgba(123,121,118,0.7));
+}

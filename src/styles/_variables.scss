@@ -13,7 +13,6 @@ $h1-font-sizes: (
 $h2-font-sizes: (
   null: 20px,
   768px: 24px,
-
 );
 $bodyS-font-sizes: (
   null: 16px,
@@ -24,3 +23,7 @@ $bodyM-font-sizes: (
   768px: 24px
 );
 
+$container-sizes: (
+  null: 340px,
+  768px: 540px
+);

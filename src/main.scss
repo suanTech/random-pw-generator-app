@@ -1,4 +1,23 @@
-html, body, #root, #root>main {
+@import './styles/mixins';
+@import './styles/variables';
+
+html, body, #root, #root>div {
   height: 100%;
   margin: 0;
 }
+
+p {
+  @include font-size($bodyS-font-sizes);
+};
+h3 {
+  @include font-size($bodyM-font-sizes);
+};
+h1 {
+  @include font-size($h1-font-sizes);
+};
+h2 {
+  @include font-size($h2-font-sizes);
+};
+button {
+  cursor: pointer;
+};

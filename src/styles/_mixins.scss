@@ -1,0 +1,30 @@
+@mixin font-size($font-sizes-map) {
+  @each $breakpoint, $font-size in $font-sizes-map {
+    @if $breakpoint == null {
+      font-size: $font-size;
+    }
+    @else {
+      @media screen and (min-width: $breakpoint) {
+        font-size: $font-size;
+      }
+    }
+  }
+};
+
+@mixin container-size($cont-sizes-map) {
+  @each $screen-size, $container-size in $cont-sizes-map {
+    @if $screen-size == null {
+      width: $container-size
+    }
+    @else {
+      @media screen and (min-width: $screen-size) {
+        width: $container-size
+      }
+    }
+  }
+};
+
+@mixin text-decoration($color: #535790, $rgba: rgba(209, 195, 182, 0.4)) {
+  color: $color;
+  text-shadow: 1px 1px 3px $rgba;
+}
