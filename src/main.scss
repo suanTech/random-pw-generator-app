@@ -21,3 +21,18 @@ h2 {
 button {
   cursor: pointer;
 };
+input {
+  background: none;
+  border: none;
+  font-family: "Cutive Mono", monospace;
+  @include text-decoration();
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &::placeholder {
+    @include text-decoration(#48525f);
+    font-family: "Cutive Mono", monospace;
+  }
+}

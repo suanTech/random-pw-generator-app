@@ -1,7 +1,8 @@
 import './Button.scss'
-import { type Button } from '../../interfaces';
 
-const Button = (props: Button): JSX.Element => {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+const Button = (props: ButtonProps): JSX.Element => {
   return <button className={props.className} onClick={props.onClick}>{props.children}</button>
 }
 

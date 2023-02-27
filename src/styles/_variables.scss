@@ -4,7 +4,7 @@ $color-muted: #868886;
 $color-main: #6DCCE6;
 $color-accent: #876DE6;
 $color-error: #E66C51;
-$color-success: #CCE66D;
+$color-success: rgb(204, 230, 109);
 
 $h1-font-sizes: (
   null : 24px,
@@ -16,7 +16,7 @@ $h2-font-sizes: (
 );
 $bodyS-font-sizes: (
   null: 16px,
-  768px: 18px,
+  768px: 20px,
 );
 $bodyM-font-sizes: (
   null: 18px,

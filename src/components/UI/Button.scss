@@ -1,7 +1,27 @@
 button {
+  font-family: "Cutive Mono", monospace;
   background: transparent;
   border: none;
-  &:active, &:focus {
+  &:active,
+  &:focus {
     outline: none;
+  }
+}
+
+.copyButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .copyIcon {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(1px 1px 1px rgba(255, 255, 230, 0.5));
+    transition: all .2s;
+    &:hover {
+      transform: scale(.95);
+    }
+    &:active {
+      filter: saturate(2);
+    }
   }
 }

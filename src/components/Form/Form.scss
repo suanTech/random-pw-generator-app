@@ -1,15 +1,18 @@
 @import '../../styles/mixins';
 
-.checkbox-wrapper {
+.main h2 {
+  @include text-decoration(#e9e6e6);
+}
+.item-wrapper {
   margin: 10px auto;
 }
-.checkbox-wrapper label {
+.item-wrapper label {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
-.checkbox-wrapper input[type="checkbox"] {
+.item-wrapper input[type="checkbox"] {
   appearance: none;
   cursor: pointer;
   width: 15px;
@@ -35,6 +38,20 @@
     }
     & + p {
       @include text-decoration(#222241);
+      animation: scaleUp .3s ease-out;
     }
   }
+
+}
+
+@keyframes scaleUp{
+0% {
+  transform: scale(1)
+}
+50% {
+  transform: scale(1.1)
+}
+100% {
+  transform: scale(.9)
+}
 }

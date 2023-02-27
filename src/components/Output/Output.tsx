@@ -2,12 +2,13 @@
 import './Output.scss'
 import { ReactComponent as CopyIcon } from '../../assets/copy-icon.svg';
 import Button from '../UI/Button'
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 const Output = (): JSX.Element => {
   const outputRef = useRef<HTMLInputElement>(null)
   const [isCopied, setIsCopied] = useState(false)
-  const handleClick = ():void =>{
-    const newOutput = outputRef.current!.value;
+  const handleClick = (e:React.MouseEvent):void =>{
+    e.preventDefault();
+    const newOutput = outputRef.current!.placeholder;
     console.log(newOutput)
     navigator.clipboard.writeText(newOutput);
     setIsCopied(true)
@@ -21,6 +22,7 @@ const Output = (): JSX.Element => {
         className="text-field" 
         type="text" 
         placeholder='eheoibn%en' 
+        readOnly
         ref={outputRef}/>
       <Button 
         className="copyButton"
