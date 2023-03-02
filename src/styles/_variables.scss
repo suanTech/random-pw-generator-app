@@ -1,6 +1,6 @@
 $color-dark: #0C0D0C;
 $color-bright: #F6F8F6;
-$color-muted: #868886;
+$color-muted: rgb(128, 125, 150);
 $color-main: #6DCCE6;
 $color-accent: #876DE6;
 $color-error: #E66C51;
@@ -20,10 +20,10 @@ $bodyS-font-sizes: (
 );
 $bodyM-font-sizes: (
   null: 18px,
-  768px: 24px
+  768px: 20px
 );
 
 $container-sizes: (
   null: 340px,
-  768px: 540px
+  768px: 520px
 );

@@ -18,10 +18,7 @@ body {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexy();
   h2 {
     text-align: center;
   }

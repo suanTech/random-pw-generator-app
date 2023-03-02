@@ -28,3 +28,14 @@
   color: $color;
   text-shadow: 1px 1px 3px $rgba;
 }
+
+@mixin flexy(
+  $disp:flex, 
+  $dir: column, 
+  $just: center, 
+  $algn: center) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $algn;
+}
