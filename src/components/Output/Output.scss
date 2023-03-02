@@ -3,14 +3,15 @@
 @import "../UI/Button.scss";
 
 .container.output {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexy($just: space-between, $dir: row)
 }
 .text-field {
   width: 80%;
   height: 100%;
   @include font-size($h2-font-sizes);
+  &::placeholder {
+    @include text-decoration($color-muted);
+  }
 }
 
 .copyMessage {

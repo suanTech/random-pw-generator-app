@@ -14,7 +14,7 @@ const Output = (): JSX.Element => {
     setIsCopied(true)
     setTimeout(() => {
       setIsCopied(false)
-    }, 3000)
+    }, 2500)
   }
   return (
     <div className="container output">
