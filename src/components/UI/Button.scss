@@ -1,6 +1,8 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
 button {
   font-family: "Cutive Mono", monospace;
-  background: transparent;
   border: none;
   &:active,
   &:focus {
@@ -9,9 +11,8 @@ button {
 }
 
 .copyButton {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexy($just: space-between, $dir: row);
+  background: transparent;
   .copyIcon {
     width: 25px;
     height: 25px;
@@ -24,4 +25,11 @@ button {
       filter: saturate(2);
     }
   }
+}
+
+.createButton {
+  @include font-size($bodyM-font-sizes);
+  padding: 10px 15px;
+  border-radius: 13px;
+  background-color:rgba(231, 231, 222, 0.2);
 }
