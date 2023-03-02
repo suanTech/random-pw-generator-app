@@ -17,7 +17,6 @@ export function useValue(initialValues: Value):ReturnValue {
   return [
     values,
     (e) => {
-      console.log(e.target.type);
       setValues({
         ...values,
       [e.target.name]:

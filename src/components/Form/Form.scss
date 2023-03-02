@@ -1,5 +1,9 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
+.main {
+  @include flexy($just: space-between, $algn: normal);
+}
 .main h2 {
   @include text-decoration(#e9e6e6);
 }
@@ -7,12 +11,17 @@
   margin: 10px auto;
 }
 .item-wrapper label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flexy($dir: row, $just: flex-start);
   gap: 20px;
+  h3 {
+    @include text-decoration($color-muted);
+    &.current {
+      animation: scaleUp .5s ease-in;
+    }
+  }
 }
 .item-wrapper input[type="checkbox"] {
+  @include flexy();
   appearance: none;
   cursor: pointer;
   width: 15px;
@@ -31,14 +40,15 @@
     background:linear-gradient(to top, rgba(134, 217, 153, 0.85) 40%,rgba(142, 206, 157, 0.75), rgba(187, 223, 196, 0.4));
     position: relative;
     &::before{
-      content: url('../../assets/check-icon.svg');
-      transform: scale(.75);
-      color: #fff;
-      position: absolute;
+      content: ' ';
+      display: block;
+      background-image: url('../../assets/check-icon.svg');
+      background-size: cover;
+      width: 10px;
+      height: 10px;
     }
-    & + p {
-      @include text-decoration(#222241);
-      animation: scaleUp .3s ease-out;
+    & + h3 {
+      @include text-decoration(#3b3445);
     }
   }
 
@@ -49,9 +59,24 @@
   transform: scale(1)
 }
 50% {
-  transform: scale(1.1)
+  transform: scale(1.05)
 }
 100% {
-  transform: scale(.9)
+  transform: scale(.95)
 }
+}
+
+.lengthValue {
+  @include flexy($disp: inline-flex);
+  @include font-size($h2-font-sizes);
+  @include text-decoration();
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 6px;
+  border: 1px solid rgba(199, 206, 200, 0.75);
+  background-color:rgba(142, 206, 157, 0.75);
+}
+.sliderContainer {
+  @include flexy($just: space-between);
+  gap: 15px;
 }
