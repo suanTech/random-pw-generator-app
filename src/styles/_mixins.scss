@@ -24,9 +24,9 @@
   }
 };
 
-@mixin text-decoration($color: #535790, $rgba: rgba(209, 195, 182, 0.4)) {
+@mixin text-decoration($color: #535790, $shadow: rgba(209, 195, 182, 0.4)) {
   color: $color;
-  text-shadow: 1px 1px 3px $rgba;
+  text-shadow: 1px 1px 3px $shadow;
 }
 
 @mixin flexy(
@@ -38,4 +38,14 @@
     flex-direction: $dir;
     justify-content: $just;
     align-items: $algn;
+}
+
+@mixin create-gradient($dir: -45deg) {
+  background-image: linear-gradient(
+    $dir,
+    rgba(148, 129, 112, 0.55),
+    rgba(100, 126, 156, 0.85),
+    rgba(134, 114, 150, 0.6),
+    rgba(153, 126, 98, 0.6)
+  );
 }

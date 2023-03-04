@@ -1,10 +1,13 @@
-$color-dark: #0C0D0C;
+$color-dark: #535790;
 $color-bright: #F6F8F6;
-$color-muted: rgb(128, 125, 150);
-$color-main: #6DCCE6;
-$color-accent: #876DE6;
-$color-error: #E66C51;
-$color-success: rgb(204, 230, 109);
+$color-muted: rgb(121, 120, 129);
+$color-grey: rgb(151,151,151);
+$color-sky-blue: #6DCCE6;
+$color-purple: #876DE6;
+$color-orange: rgb(168, 112, 63);
+$color-blue: rgb(35, 106, 186);
+$color-light-blue: lighten($color-blue, 25);
+$color-dark-blue: darken($color-blue, 20);
 
 $h1-font-sizes: (
   null : 24px,
@@ -14,6 +17,10 @@ $h2-font-sizes: (
   null: 20px,
   768px: 24px,
 );
+$bodyXS-font-sizes: (
+  null: 14px,
+  768px: 18px,
+);
 $bodyS-font-sizes: (
   null: 16px,
   768px: 20px,
@@ -22,8 +29,7 @@ $bodyM-font-sizes: (
   null: 18px,
   768px: 20px
 );
-
 $container-sizes: (
   null: 340px,
-  768px: 520px
+  768px: 430px
 );
