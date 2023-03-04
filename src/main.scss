@@ -32,7 +32,6 @@ input {
     border: none;
   }
   &::placeholder {
-    @include text-decoration(#48525f);
     font-family: "Cutive Mono", monospace;
   }
 }

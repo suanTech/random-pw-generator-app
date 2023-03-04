@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Source+Code+Pro&display=swap');
 @import "./styles/variables";
 @import "./styles/mixins";
 
@@ -12,7 +12,7 @@
 }
 body {
   font-family: "Cutive Mono", monospace;
-  background: linear-gradient(-45deg, $color-accent, $color-main);
+  background: linear-gradient(-45deg, $color-purple, $color-sky-blue);
   background-repeat: no-repeat;
   @include text-decoration(#535790);
 }
@@ -25,21 +25,17 @@ body {
 }
 
 .container {
+  @include container-size($container-sizes);
   margin-top: 1rem;
-  min-height: 50px;
-  padding: .8em;
+  min-height: 40px;
+  padding: .8rem;
   background: linear-gradient(
     -60deg,
-    rgba(151, 151, 151, 0.2),
-    rgba(255, 230, 232, 0.1)
+    rgba($color-grey, 0.2),
+    rgba($color-bright, 0.1)
   );
   backdrop-filter: blur(85px);
   -webkit-backdrop-filter: blur(85px);
-  box-shadow: 1px 4px 10px rgba(20, 20, 151, 0.18);
+  box-shadow: 1px 4px 10px rgba($color-dark-blue, 0.18);
   border-radius: 0.8rem;
-  @include container-size($container-sizes);
-  &.main {
-    min-height: 65vh;
-    padding: 1.2rem;
-  }
 }
