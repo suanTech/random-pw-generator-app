@@ -1,17 +1,17 @@
-
-import './Output.scss'
 import { ReactComponent as CopyIcon } from '../../assets/copy-icon.svg';
 import Button from '../UI/Button'
-import { useContext, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Appcontext } from '../../context/context';
-const Output = (): JSX.Element => {
+
+import './Output.scss'
+
+export const Output = (): JSX.Element => {
   const {result} = useContext(Appcontext);
   const [show, setShow] = useState(false);
   const [error, setError] = useState<boolean>();
   const handleClick  = (e:React.MouseEvent):void => {
     e.preventDefault();
     setShow(true);
-    console.log(result);
     if(result) {
       navigator.clipboard.writeText(result);
       setError(false);
@@ -41,5 +41,3 @@ const Output = (): JSX.Element => {
     </div>
   )
 }
-
-export { Output }
