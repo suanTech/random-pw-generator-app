@@ -4,7 +4,7 @@ import { v4 as id } from 'uuid'
 import './Form.scss'
 import Slider from "../UI/Slider";
 import { useContext, useState } from "react";
-import { getRandomChar, getRandomSymbol } from "../utils/helper";
+import { getRandomChar, getRandomSymbol } from "../../utils/helper";
 import { Appcontext} from "../../context/context";
 import Button from "../UI/Button";
 
