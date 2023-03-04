@@ -2,18 +2,24 @@
 import './Output.scss'
 import { ReactComponent as CopyIcon } from '../../assets/copy-icon.svg';
 import Button from '../UI/Button'
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { Appcontext } from '../../context/context';
 const Output = (): JSX.Element => {
-  const outputRef = useRef<HTMLInputElement>(null)
-  const [isCopied, setIsCopied] = useState(false)
-  const handleClick = (e:React.MouseEvent):void =>{
+  const {result} = useContext(Appcontext);
+  const [show, setShow] = useState(false);
+  const [error, setError] = useState<boolean>();
+  const handleClick  = (e:React.MouseEvent):void => {
     e.preventDefault();
-    const newOutput = outputRef.current!.placeholder;
-    console.log(newOutput)
-    navigator.clipboard.writeText(newOutput);
-    setIsCopied(true)
+    setShow(true);
+    console.log(result);
+    if(result) {
+      navigator.clipboard.writeText(result);
+      setError(false);
+    } else {
+      setError(true)
+    }
     setTimeout(() => {
-      setIsCopied(false)
+      setShow(false)
     }, 2500)
   }
   return (
@@ -21,14 +27,15 @@ const Output = (): JSX.Element => {
       <input 
         className="text-field" 
         type="text" 
-        placeholder='eheoibn%en' 
+        placeholder='Password appears here' 
         readOnly
-        ref={outputRef}/>
+        value={result}/>
       <Button 
         className="copyButton"
         onClick={handleClick}
+        disabled={error}
       >
-        <p className={`copyMessage ${isCopied ? 'show' : ''}`}>copied!</p>
+        <p className={`copyMessage ${show ? 'show' : ''}`}>{error ? '' : 'copied!'}</p>
         <CopyIcon className='copyIcon' />
         </Button>
     </div>
