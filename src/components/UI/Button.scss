@@ -1,5 +1,5 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 button {
   font-family: "Cutive Mono", monospace;
@@ -7,6 +7,27 @@ button {
   &:active,
   &:focus {
     outline: none;
+  }
+} 
+
+.generateButton {
+  @include font-size($h2-font-sizes);
+  @include text-decoration(
+    rgba($color-bright, 0.8),
+    rgba($color-dark-blue, 0.4)
+  );
+  width: 100%;
+  max-width: 370px;
+  padding: 10px 15px;
+  border: 1px solid rgba($color-bright, 0.4);
+  border-radius: 13px;
+  background-color: rgba($color-muted, 0.75);
+  @include create-gradient();
+  transition: all 0.4s ease-out;
+  &:hover {
+    @include create-gradient();
+    background-color: rgba($color-blue, 0.85);
+    transform: scale(0.97);
   }
 }
 
@@ -16,31 +37,13 @@ button {
   .copyIcon {
     width: 25px;
     height: 25px;
-    filter: drop-shadow(1px 1px 1px rgba(255, 255, 230, 0.5));
-    transition: all .2s;
+    filter: drop-shadow(1px 1px 1px rgba($color-bright, 0.5));
+    transition: all 0.2s;
     &:hover {
-      transform: scale(.95);
+      transform: scale(0.95);
     }
     &:active {
-      filter: saturate(2);
+      transform: scale(0.85);
     }
   }
 }
-
-.generateButton {
-  @include font-size($h2-font-sizes);
-  @include text-decoration(rgba(233, 230, 230, .8));
-  padding: 10px 15px;
-  border: 1.6px solid rgba(238, 233, 230, 0.4);
-  box-shadow:rgba(238, 233, 230, 0.9);
-  border-radius: 13px;
-  background-color: rgba(87, 88, 89, 0.75);
-  background-image: linear-gradient(-45deg, rgba(75, 99, 72, 0.8), rgba(100, 126, 156, 0.85), rgba(134, 114, 150, 0.6));
-  transition: all .4s ease-out;
-  &:hover {
-    // background-color: rgba(158, 133, 41, 0.7);
-    background-color: rgba(92, 44, 155, 0.75);
-    transform: scale(0.97);
-
-  }
-};
