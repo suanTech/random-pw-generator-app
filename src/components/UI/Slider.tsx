@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useState } from 'react';
+import { InputHTMLAttributes } from 'react';
 import './Slider.scss'
 
 interface SliderProps extends InputHTMLAttributes<HTMLInputElement> {

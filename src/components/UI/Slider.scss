@@ -9,13 +9,13 @@
 }
 
 .slider {
-  width: 90%;
+  width: 95%;
   height: 10px;
   appearance: none;
-  background-color: rgba(130, 136, 143, 0.75);
-  background-image: linear-gradient(to right, rgba(154, 98, 200, 0.55) 55%,  rgba(71, 115, 81, 0.35));
+  background-color: rgba($color-muted, 0.65);
+  background-image: linear-gradient(to right, rgba($color-purple, 0.55),  rgba($color-orange, 0.75));
   background-repeat: no-repeat;
-  box-shadow: 1px 1px 2px rgba(126, 126, 117, 0.6);
+  box-shadow: 1px 1px 2px rgba($color-light-blue, 0.4);
   border-radius: 5px;
   &::-webkit-slider-thumb {
     appearance: none;
@@ -23,8 +23,7 @@
     position: relative;
     width: 20px;
     height: 20px;
-    background-color: rgba(35, 106, 186, .85);
-    box-shadow: 1px 1px 2px rgba(171, 162, 206, 0.9);
+    background-color: rgba($color-blue, .85);
     border-radius: 50%;
     transition: transform .3s ease-in-out;
     cursor: pointer;
