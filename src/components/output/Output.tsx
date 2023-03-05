@@ -6,15 +6,14 @@ import { Appcontext } from '../../context/context';
 import './Output.scss'
 
 export const Output = (): JSX.Element => {
-  const {result} = useContext(Appcontext);
+  const {result, error, setError} = useContext(Appcontext);
   const [show, setShow] = useState(false);
-  const [error, setError] = useState<boolean>();
   const handleClick  = (e:React.MouseEvent):void => {
     e.preventDefault();
     setShow(true);
     if(result) {
-      navigator.clipboard.writeText(result);
       setError(false);
+      navigator.clipboard.writeText(result);
     } else {
       setError(true)
     }
@@ -27,7 +26,7 @@ export const Output = (): JSX.Element => {
       <input 
         className="text-field" 
         type="text" 
-        placeholder='Password appears here' 
+        placeholder='R@aND0M p@$$W0Rd' 
         readOnly
         value={result}/>
       <Button 

@@ -10,7 +10,7 @@ import { v4 as id } from 'uuid'
 import './Form.scss'
 
 export const Form = () => {
-  const { setResult } = useContext(Appcontext);
+  const { setResult, setError } = useContext(Appcontext);
   const [values, setValues] = useValue({
     length: 7,
     uppercase: false,
@@ -43,6 +43,7 @@ export const Form = () => {
   }
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    setError(false);
     let generatedPassword = '';
     const selectedOptions = options.filter(({ option }) => option)
     for (let i = 0; i < values.length; i++) {

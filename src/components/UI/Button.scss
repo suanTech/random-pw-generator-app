@@ -11,7 +11,8 @@ button {
 } 
 
 .generateButton {
-  @include font-size($h2-font-sizes);
+  // font-family: 'Source Code Pro', monospace;
+  @include font-size($h1-font-sizes);
   @include text-decoration(
     rgba($color-bright, 0.8),
     rgba($color-dark-blue, 0.4)

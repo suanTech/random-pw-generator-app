@@ -15,8 +15,7 @@
   &::placeholder {
     letter-spacing: .8px;
     font-size: .75em;
-    font-style: italic;
-    @include text-decoration(rgba($color-dark, .7));
+    @include text-decoration($color-dark);
   }
 }
 .copyMessage {

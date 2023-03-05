@@ -19,7 +19,7 @@
   padding: 1.5rem .9rem;
 }
 .main h2 {
-  @include text-decoration($color-dark, rgba($color-bright, .4));
+  @include text-decoration($color-dark);
 }
 .optionsContainer {
   padding: 10px 20px;
@@ -66,7 +66,7 @@
       height: 8px;
     }
     & + h3 {
-      @include text-decoration(rgba($color-bright, 0.9), rgba($color-muted, .8));
+      @include text-decoration(rgba($color-bright, 0.9), $color-grey);
     }
   }
 }

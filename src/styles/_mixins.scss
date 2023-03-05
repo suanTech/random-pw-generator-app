@@ -26,7 +26,7 @@
 
 @mixin text-decoration($color: #535790, $shadow: rgba(209, 195, 182, 0.4)) {
   color: $color;
-  text-shadow: 1px 1px 3px $shadow;
+  text-shadow: 1px 1px 2px $shadow;
 }
 
 @mixin flexy(
