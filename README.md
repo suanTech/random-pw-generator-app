@@ -23,4 +23,4 @@ Password Generator App built with React, TypeScript and SASS
 
 ## 🌪️ Struggles and Handling
 
-* Documented via Notion [here](https://gray-push-d44.notion.site/Random-PW-Generator-app-c4585e964bd94f3dbbb614feff205fcb)
+* Documented via Notion [here](https://gray-push-d44.notion.site/Random-PW-Generator-app-1e63dfaa627a4a069f72d35d634da64d)
