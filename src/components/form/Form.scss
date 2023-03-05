@@ -1,17 +1,6 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-@keyframes scaleUp {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(0.95);
-  }
-}
 .container.main {
   @include flexy($just: space-between, $algn: center);
   height: 50vh;
