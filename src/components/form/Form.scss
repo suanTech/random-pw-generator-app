@@ -1,0 +1,90 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+.container.main {
+  @include flexy($just: space-between, $algn: center);
+  height: 50vh;
+  min-height: 400px;
+  padding: 1.5rem .9rem;
+}
+.main h2 {
+  @include text-decoration($color-dark, rgba($color-bright, .4));
+}
+.optionsContainer {
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.item-wrapper {
+  margin: 10px auto;
+}
+.item-wrapper label {
+  @include flexy($dir: row, $just: normal);
+  gap: 20px;
+  h3 {
+    @include text-decoration($color-dark);
+  }
+}
+.item-wrapper input[type="checkbox"] {
+  @include flexy();
+  cursor: pointer;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 1.6px solid rgba($color-bright, 0.35);
+  border-radius: 2px;
+  transition: all 0.2s ease-out;
+  &:hover {
+    transform: scale(1.05);
+    border: 1.6px solid rgba($color-bright, 0.45);
+    background: linear-gradient(to top, rgba($color-bright, .4), rgba($color-bright, 0.3));
+    + h3 {
+      @include text-decoration(rgba($color-bright, 0.7), $color-muted);
+    }
+  }
+  &:checked {
+    background: linear-gradient(to top, rgba($color-blue, .4), rgba($color-blue, 0.3));
+    border: 1.6px solid rgba($color-bright, 0.65);
+    position: relative;
+    &::before {
+      content: " ";
+      display: block;
+      background-image: url("../../assets/check-icon.svg");
+      background-size: cover;
+      width: 8px;
+      height: 8px;
+    }
+    & + h3 {
+      @include text-decoration(rgba($color-bright, 0.9), rgba($color-muted, .8));
+    }
+  }
+}
+.lengthValue {
+  @include flexy($disp: inline-flex);
+  @include font-size($bodyM-font-sizes);
+  @include text-decoration($color-bright);
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 8px;
+  border: 1px solid rgba(214, 228, 217, 0.65);
+  background-color: rgba($color-blue, 0.35);
+}
+.sliderContainer {
+  @include flexy($just: space-between);
+  gap: 15px;
+  margin: 25px 0;
+  width: 100%;
+  max-width: 370px;
+}
+
