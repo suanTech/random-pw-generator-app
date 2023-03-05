@@ -7,7 +7,7 @@
 Password Generator App built with React, TypeScript and SASS
 
 ## Screenshots
-![screenshot](https://i.imgur.com/Rf7YgJZ.jpg)
+![screenshot](https://imgur.com/Lrg2yjY.jpg)
 
 
 ## 🗝️ Features
@@ -19,7 +19,7 @@ Password Generator App built with React, TypeScript and SASS
 * Mobile first approach
 
 ## 🛠️ Tech Stack
-![techStack](https://imgur.com/wE2RYiq.png)
+![techStack](https://i.imgur.com/Rf7YgJZ.jpg)
 
 ## 🌪️ Struggles and Handling
 
